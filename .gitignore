@@ -1,0 +1,6 @@
+# Vendor app and everything decompiled from it: copyrighted, never committed.
+apk/
+# Xcode
+ios/build/
+xcuserdata/
+.DS_Store

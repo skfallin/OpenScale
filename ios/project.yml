@@ -1,0 +1,39 @@
+# Generate the Xcode project with `xcodegen` (brew install xcodegen), then open Bilancia.xcodeproj.
+name: Bilancia
+options:
+  bundleIdPrefix: it.torinz
+  developmentLanguage: it
+  deploymentTarget:
+    iOS: "26.0"
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+    SWIFT_APPROACHABLE_CONCURRENCY: YES
+targets:
+  Bilancia:
+    type: application
+    platform: iOS
+    sources:
+      - path: Bilancia
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: it.torinz.bilancia
+        PRODUCT_NAME: Bilancia
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CODE_SIGN_STYLE: Automatic
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+    info:
+      path: Bilancia/Info.plist
+      properties:
+        CFBundleDisplayName: Bilancia
+        NSBluetoothAlwaysUsageDescription: Serve per leggere il peso e l'impedenza che la bilancia trasmette via Bluetooth.
+        ITSAppUsesNonExemptEncryption: false
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
