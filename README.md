@@ -1,6 +1,6 @@
 <p align="center"><img src="docs/img/icon.png" width="120" alt="Bilancia icon"></p>
 
-<h1 align="center">SCALEre</h1>
+<h1 align="center">Mi Scale 2</h1>
 
 <p align="center">
 The Xiaomi Mi Body Composition Scale 2, taken apart from the outside:<br>
