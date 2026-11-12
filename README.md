@@ -28,10 +28,15 @@ Nothing from the vendor is in this repository: no APK, no decompiled code, no na
 
 ```mermaid
 flowchart LR
-    S["Scale (BLE name MIBFS)<br>load cells + 4 electrodes"] -- "advertisement<br>Service Data 0x181B, 13 bytes<br>no pairing, no encryption" --> P["Any phone or computer in range"]
-    P --> D["Decode:<br>weight, impedance, time, flags"]
-    D --> F["Formulas:<br>weight + impedance + height + age + sex"]
-    F --> R["Body fat, water, muscle,<br>bone, protein, visceral fat"]
+    S["Scale, BLE name MIBFS<br/>load cells and 4 electrodes"]
+    P["Any phone or computer in range"]
+    D["Decode<br/>weight, impedance, time, flags"]
+    F["Formulas<br/>weight, impedance, height, age, sex"]
+    R["Body fat, water, muscle,<br/>bone, protein, visceral fat"]
+    S -->|"advertisement, 13 bytes<br/>no pairing, no encryption"| P
+    P --> D
+    D --> F
+    F --> R
 ```
 
 The scale is a simple device. It measures two things, your weight and the electrical resistance between your feet (impedance), and broadcasts them to anyone listening. It knows nothing about you. Everything else is arithmetic done on the phone.
